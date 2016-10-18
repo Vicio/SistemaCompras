@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="ComprasUAQ.Windows.Elements.Departamentos"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ComprasUAQ.Windows.Elements"
+             mc:Ignorable="d" 
+             d:DesignHeight="380" d:DesignWidth="150">
+    <Grid HorizontalAlignment="Left" Height="380" Margin="0,0,0,0" VerticalAlignment="Top" Width="150" Background="#FFFFFF" RenderTransformOrigin="0.5,0.5" >
+        <Border Background="#D9D9D9" BorderThickness="1,1,1,1" CornerRadius="9,9,9,9">
+        </Border>
+        <Label x:Name="label" Content="Departamentos" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#121548"/>
+        <ScrollViewer HorizontalAlignment="Left" Height="330" Margin="0,43,0,10" VerticalAlignment="Top" Width="150">
+            <StackPanel x:Name="PanelImagenes" HorizontalAlignment="Left" Height="320" Margin="5,5,0,0" VerticalAlignment="Top" Width="125">
+                <Image x:Name="Naturales" Height="50" Width="35" HorizontalAlignment="Left" Margin="5,5,0,0" Source="/ComprasUAQ;component/Images/Facultades/CienciasNaturales.jpg"  Cursor="Hand"/>
+                <Image x:Name="Quimica" Height="50" Width="35" HorizontalAlignment="Left" Margin="45,-50,0,0" Source="/ComprasUAQ;component/Images/Facultades/Quimica.jpg" Cursor="Hand"/>
+                <Image x:Name="Ingenieria" Height="50" Width="35" HorizontalAlignment="Left" Margin="85,-50,0,0" Source="/ComprasUAQ;component/Images/Facultades/Ingenieria.jpg"  Cursor="Hand" />
+                <Image x:Name="Derecho" Height="50" Width="35" HorizontalAlignment="Left" Margin="5,5,0,0" Source="/ComprasUAQ;component/Images/Facultades/Derecho.jpg"  Cursor="Hand"/>
+                <Image x:Name="Artes" Height="50" Width="35" HorizontalAlignment="Left" Margin="45,-50,0,0" Source="/ComprasUAQ;component/Images/Facultades/BellasArtes.jpg"  Cursor="Hand"/>
+                <Image x:Name="Politicas" Height="50" Width="35" HorizontalAlignment="Left" Margin="85,-50,0,0" Source="/ComprasUAQ;component/Images/Facultades/CienciasPoliticasySociales.jpg" Cursor="Hand" />
+                <Image x:Name="Medicina" Height="50" Width="35" HorizontalAlignment="Left" Margin="5,5,0,0" Source="/ComprasUAQ;component/Images/Facultades/Medicina.jpg" Cursor="Hand"/>
+                <Image x:Name="Psicologia" Height="50" Width="35" HorizontalAlignment="Left" Margin="45,-50,0,0" Source="/ComprasUAQ;component/Images/Facultades/Psicologia.jpg" Cursor="Hand" />
+                <Image x:Name="Bachilleres" Height="50" Width="35" HorizontalAlignment="Left" Margin="85,-50,0,0" Source="/ComprasUAQ;component/Images/Facultades/Bachilleres.jpg" Cursor="Hand" />
+                <Image x:Name="Enfermeria" Height="50" Width="35" HorizontalAlignment="Left" Margin="5,5,0,0" Source="/ComprasUAQ;component/Images/Facultades/Enfermeria.jpg" Cursor="Hand" />
+                <Image x:Name="Informatica" Height="50" Width="35" HorizontalAlignment="Left" Margin="45,-50,0,0" Source="/ComprasUAQ;component/Images/Facultades/Informatica.jpg" Cursor="Hand" />
+                <Image x:Name="Letras" Height="50" Width="35" HorizontalAlignment="Left" Margin="85,-50,0,0" Source="/ComprasUAQ;component/Images/Facultades/Lenguas y Letras.jpg" Cursor="Hand" />
+                <Image x:Name="Contabilidad" Height="50" Width="35" HorizontalAlignment="Left" Margin="5,5,0,0" Source="/ComprasUAQ;component/Images/Facultades/Contabilidad.jpg" Cursor="Hand" />
+                <Image x:Name="Filosofia" Height="50" Width="35" HorizontalAlignment="Left" Margin="45,-50,0,0" Source="/ComprasUAQ;component/Images/Facultades/Filosofia.jpg" Cursor="Hand" />
+
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="ComprasUAQ.Windows.Elements.BarraPrincipal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ComprasUAQ.Windows.Elements"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="900">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="50" Margin="0,0,0,0" VerticalAlignment="Top" Width="900" Background="#FF121548" MouseDown="ArrastarVentana">
+            <Image x:Name="imagenLogo" HorizontalAlignment="Left" Height="50" Margin="80,0,0,0" VerticalAlignment="Top" Width="250" Source="/ComprasUAQ;component/Images\Logo.jpg"/>
+            <Image x:Name="imagenCerrar" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Width="20" Source="/ComprasUAQ;component/Images/Iconos/cerrar_icono-01.png" Margin="0,0,20,0" MouseUp="CerrarVentana" Cursor="Hand"/>
+            <Image x:Name="imagenMinimizar" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Width="20" Source="/ComprasUAQ;component/Images/Iconos/minimizar_icono-01.png" Margin="0,0,70,0" MouseUp="Minimizar" Cursor="Hand"/>
+            <Image x:Name="imageMaximizar" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Width="20" Source="/ComprasUAQ;component/Images/Iconos/maximizar_icono-01.png" Margin="0,0,45,0" MouseUp="MaximizarVentana" Cursor="Hand"/>
+            <Image x:Name="imagenMenu" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Source="/ComprasUAQ;component/Images/Iconos/menu_boton.png" Margin="20,0,0,0" MouseEnter="SeleccionMenu" MouseUp="CreacionMenu" Cursor="Hand"/>
+
+        </Grid>
+    </Grid>
+</UserControl>

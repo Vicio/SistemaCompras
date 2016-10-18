@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComprasUAQ", "ComprasUAQ\ComprasUAQ.csproj", "{6364038F-D7CE-40D1-A6F7-1A77519E8808}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComprasUAQTests", "ComprasUAQTests\ComprasUAQTests.csproj", "{BBC4A3DD-EBD4-4D3A-9F68-FF0E7448A073}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6364038F-D7CE-40D1-A6F7-1A77519E8808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6364038F-D7CE-40D1-A6F7-1A77519E8808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6364038F-D7CE-40D1-A6F7-1A77519E8808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6364038F-D7CE-40D1-A6F7-1A77519E8808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC4A3DD-EBD4-4D3A-9F68-FF0E7448A073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC4A3DD-EBD4-4D3A-9F68-FF0E7448A073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC4A3DD-EBD4-4D3A-9F68-FF0E7448A073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC4A3DD-EBD4-4D3A-9F68-FF0E7448A073}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://cgsi.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ComprasUAQ\\ComprasUAQ.csproj
+		SccProjectName1 = ComprasUAQ
+		SccLocalPath1 = ComprasUAQ
+		SccProjectUniqueName2 = ComprasUAQTests\\ComprasUAQTests.csproj
+		SccProjectName2 = ComprasUAQTests
+		SccLocalPath2 = ComprasUAQTests
+	EndGlobalSection
+EndGlobal

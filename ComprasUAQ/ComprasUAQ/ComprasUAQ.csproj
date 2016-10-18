@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6364038F-D7CE-40D1-A6F7-1A77519E8808}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComprasUAQ</RootNamespace>
+    <AssemblyName>ComprasUAQ</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\CentroGastoDAO.cs" />
+    <Compile Include="DAO\CompradorDAO.cs" />
+    <Compile Include="DAO\OrdenCompraDAO.cs" />
+    <Compile Include="DAO\ProveedorDAO.cs" />
+    <Compile Include="DAO\RecepcionAlmacenDAO.cs" />
+    <Compile Include="DAO\RemitenteDAO.cs" />
+    <Compile Include="DAO\RequisicionDAO.cs" />
+    <Compile Include="DataSets\DAO.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAO.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Elements\Avisos.xaml.cs">
+      <DependentUpon>Avisos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Elements\controlEstado.xaml.cs">
+      <DependentUpon>controlEstado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Elements\controlPendientes.xaml.cs">
+      <DependentUpon>controlPendientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Elements\Departamentos.xaml.cs">
+      <DependentUpon>Departamentos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Elements\FormCentroGasto.xaml.cs">
+      <DependentUpon>FormCentroGasto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Elements\FormCompradores.xaml.cs">
+      <DependentUpon>FormCompradores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Elements\FormProveedor.xaml.cs">
+      <DependentUpon>FormProveedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Elements\Formulario.xaml.cs">
+      <DependentUpon>Formulario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Elements\MenuDesplegable.xaml.cs">
+      <DependentUpon>MenuDesplegable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Elements\Pendientes.xaml.cs">
+      <DependentUpon>Pendientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Elements\RequisicionesDepartamento.xaml.cs">
+      <DependentUpon>RequisicionesDepartamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\VentanaPrincipal.xaml.cs">
+      <DependentUpon>VentanaPrincipal.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Windows\Elements\Avisos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Elements\controlEstado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Elements\controlPendientes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Elements\Departamentos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Elements\FormCentroGasto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Elements\FormCompradores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Elements\FormProveedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Elements\Formulario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Elements\MenuDesplegable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Elements\Pendientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Elements\RequisicionesDepartamento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Forms\VentanaPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="POCO\CentroGasto.cs" />
+    <Compile Include="POCO\Comprador.cs" />
+    <Compile Include="POCO\OrdenCompra.cs" />
+    <Compile Include="POCO\Organizacion.cs" />
+    <Compile Include="POCO\Persona.cs" />
+    <Compile Include="POCO\Proveedor.cs" />
+    <Compile Include="POCO\RecepcionAlmacen.cs" />
+    <Compile Include="POCO\Remitente.cs" />
+    <Compile Include="POCO\Requisicion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="DataSets\DAO.dbml.layout">
+      <DependentUpon>DAO.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSets\DAO.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DAO.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Resource Include="Fonts\FuturaStd-Book.otf" />
+    <Resource Include="Fonts\FuturaStd-Heavy.otf" />
+    <Resource Include="Fonts\FuturaStd-Light.otf" />
+    <Resource Include="Fonts\FuturaStd-Medium.otf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AppData\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DAO\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DataSets\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="POCO\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Facultades\Bachilleres.jpg" />
+    <Resource Include="Images\Facultades\BellasArtes.jpg" />
+    <Resource Include="Images\Facultades\CienciasNaturales.jpg" />
+    <Resource Include="Images\Facultades\CienciasPoliticasySociales.jpg" />
+    <Resource Include="Images\Facultades\Contabilidad.jpg" />
+    <Resource Include="Images\Facultades\Derecho.jpg" />
+    <Resource Include="Images\Facultades\Enfermeria.jpg" />
+    <Resource Include="Images\Facultades\Filosofia.jpg" />
+    <Resource Include="Images\Facultades\Informatica.jpg" />
+    <Resource Include="Images\Facultades\Ingenieria.jpg" />
+    <Resource Include="Images\Facultades\Lenguas y Letras.jpg" />
+    <Resource Include="Images\Facultades\Medicina.jpg" />
+    <Resource Include="Images\Facultades\Psicologia.jpg" />
+    <Resource Include="Images\Facultades\Quimica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\Forms\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\MessageBoxes\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\Tabs\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Departamentos\TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Iconos\calendario_icono.png" />
+    <Resource Include="Images\Iconos\cerrar_icono-01.png" />
+    <Content Include="Images\Iconos\cerrar_icono-01.svg" />
+    <Resource Include="Images\Iconos\maximizar_icono-01.png" />
+    <Resource Include="Images\Iconos\mensaje_icono-01.png" />
+    <Resource Include="Images\Iconos\mensaje_icono.png" />
+    <Resource Include="Images\Iconos\menu_boton.png" />
+    <Resource Include="Images\Iconos\menu_boton_2.png" />
+    <Resource Include="Images\Iconos\minimizar_icono-01.png" />
+    <Resource Include="Images\Iconos\notificacion_icono.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

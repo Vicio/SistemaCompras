@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9" name="DAO">
+  <DataContextMoniker Name="/DAODataContext" />
+  <nestedChildShapes>
+    <classShape Id="5b1b4fe7-4f8d-45cd-8a39-389389cc0ff8" absoluteBounds="0.75, 3.375, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/DAODataContext/centros_gasto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="205fea96-a06f-46f0-b304-dda8fa8e7350" absoluteBounds="0.765, 3.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="34cc09bd-6340-465a-aa1a-1359d5e3b2fd" absoluteBounds="3.5, 2.5, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/DAODataContext/requisiciones" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e78eb68-f1e8-4d57-81b2-ab3ef44ba145" absoluteBounds="3.515, 2.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef6cc9c3-63e5-488a-8d9f-b44275933b8d" absoluteBounds="0.625, 5.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DAODataContext/compradores" />
+      <nestedChildShapes>
+        <elementListCompartment Id="08c51a99-6d01-4f55-8d1e-5875bba455bc" absoluteBounds="0.64, 5.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="467903e3-0c9b-4763-a98e-9698a397160b" absoluteBounds="6.375, 4.75, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/DAODataContext/ordenes_compra" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a80b79d8-d898-4d99-a5da-bc532a59e00c" absoluteBounds="6.39, 5.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3c1d31b-e6e4-444c-88ba-c7a4df977235" absoluteBounds="0.75, 1.125, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/DAODataContext/proveedores" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6318088-8fd5-42fd-ba30-7c1fbdd8263d" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d321ccb-52cf-405b-ad68-d184e0a7fbd2" absoluteBounds="6.25, 1.75, 2.75, 2.3478011067708335">
+      <DataClassMoniker Name="/DAODataContext/recepciones_almacen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18d9c4a7-9f4f-4662-8f33-1cf73e112afa" absoluteBounds="6.265, 2.21, 2.7199999999999998, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="59304d3f-2483-46cb-9308-e6107fee20f3" absoluteBounds="3.5, 7.125, 2, 1.5785953776041657">
+      <DataClassMoniker Name="/DAODataContext/remitentes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba4d36f8-f91f-4602-b5c0-7dc1a774f94c" absoluteBounds="3.515, 7.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 3.97199625651042); (3.5 : 3.97199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DAODataContext/centros_gasto/centros_gasto_requisiciones" />
+      <nodes>
+        <classShapeMoniker Id="5b1b4fe7-4f8d-45cd-8a39-389389cc0ff8" />
+        <classShapeMoniker Id="34cc09bd-6340-465a-aa1a-1359d5e3b2fd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 6.095402890625); (4.4687475 : 6.095402890625); (4.4687475 : 5.42470540364583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DAODataContext/compradores/compradores_requisiciones" />
+      <nodes>
+        <classShapeMoniker Id="ef6cc9c3-63e5-488a-8d9f-b44275933b8d" />
+        <classShapeMoniker Id="34cc09bd-6340-465a-aa1a-1359d5e3b2fd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.8124995); (4.5 : 1.8124995); (4.5 : 2.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DAODataContext/proveedores/proveedores_requisiciones" />
+      <nodes>
+        <classShapeMoniker Id="a3c1d31b-e6e4-444c-88ba-c7a4df977235" />
+        <classShapeMoniker Id="34cc09bd-6340-465a-aa1a-1359d5e3b2fd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.08735270182292); (6.375 : 5.08735270182292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DAODataContext/requisiciones/requisiciones_ordenes_compra" />
+      <nodes>
+        <classShapeMoniker Id="34cc09bd-6340-465a-aa1a-1359d5e3b2fd" />
+        <classShapeMoniker Id="467903e3-0c9b-4763-a98e-9698a397160b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.29890055338542); (6.25 : 3.29890055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DAODataContext/requisiciones/requisiciones_recepciones_almacen" />
+      <nodes>
+        <classShapeMoniker Id="34cc09bd-6340-465a-aa1a-1359d5e3b2fd" />
+        <classShapeMoniker Id="2d321ccb-52cf-405b-ad68-d184e0a7fbd2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.02809895833333); (8.71875 : 8.02809895833333); (8.71875 : 4.09780110677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DAODataContext/remitentes/remitentes_recepciones_almacen" />
+      <nodes>
+        <classShapeMoniker Id="59304d3f-2483-46cb-9308-e6107fee20f3" />
+        <classShapeMoniker Id="2d321ccb-52cf-405b-ad68-d184e0a7fbd2" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

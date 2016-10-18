@@ -1,0 +1,7 @@
+﻿<Application
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ComprasUAQ"
+             xmlns:Forms="clr-namespace:ComprasUAQ.Windows.Forms" x:Class="ComprasUAQ.App"
+             StartupUri="Windows/Forms/VentanaPrincipal.xaml">
+</Application>

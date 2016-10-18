@@ -1,0 +1,36 @@
+﻿<Window x:Class="ComprasUAQ.Windows.Forms.VentanaPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComprasUAQ.Windows.Forms"
+        mc:Ignorable="d"
+        Title="VentanaPrincipal" Height="520" Width="900" WindowStyle="None" xmlns:ElementsControl="clr-namespace:ComprasUAQ.Windows.Elements" AllowsTransparency="True" ResizeMode="CanResizeWithGrip">
+    <Grid x:Name="GridPrincipal">
+        <Grid HorizontalAlignment="Left" Height="50" Margin="0,0,0,0" VerticalAlignment="Top" Width="900" Background="#FF121548">
+            <Image x:Name="imagenLogo" HorizontalAlignment="Left" Height="50" Margin="80,0,0,0" VerticalAlignment="Top" Width="250" Source="/ComprasUAQ;component/Images\Logo.jpg"/>
+            <Image x:Name="imagenCerrar" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Width="20" Source="/ComprasUAQ;component/Images/Iconos/cerrar_icono-01.png" Margin="0,0,20,0" MouseUp="CerrarVentana" Cursor="Hand"/>
+            <Image x:Name="imagenMinimizar" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Width="20" Source="/ComprasUAQ;component/Images/Iconos/minimizar_icono-01.png" Margin="0,0,70,0" MouseUp="Minimizar" Cursor="Hand"/>
+            <Image x:Name="imageMaximizar" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Width="20" Source="/ComprasUAQ;component/Images/Iconos/maximizar_icono-01.png" Margin="0,0,45,0" MouseUp="MaximizarVentana" Cursor="Hand"/>
+            <Image x:Name="imagenMenu" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Source="/ComprasUAQ;component/Images/Iconos/menu_boton.png" Margin="20,0,0,0" MouseEnter="SeleccionMenu" MouseUp="CreacionMenu" Cursor="Hand" MouseLeave="LeaveMenu"/>
+            
+        </Grid>
+        
+        <ElementsControl:Departamentos Height="380" Width="150" x:Name="Departamentos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,70,0,0" MouseUp="Departamentos_MouseUp"/>
+        <ElementsControl:MenuDesplegable Height="450" Width="180" x:Name="Menu" HorizontalAlignment="Left" Margin="0,40,0,0" Visibility="Hidden"/>
+        <ElementsControl:RequisicionesDepartamento x:Name="RequisicionesDepartamento" Width="450" Height="400" VerticalAlignment="Top"  Margin="0, 70, 0, 0"></ElementsControl:RequisicionesDepartamento>
+        <ElementsControl:Formulario x:Name="FormAlmacen" Width="685" Height="470" HorizontalAlignment="Left"  Margin="0, 50, 0, 0" Visibility="Hidden"></ElementsControl:Formulario>
+        <ElementsControl:FormCompradores x:Name="formComprador" Width="685" Height="470" HorizontalAlignment="Left"  Margin="0, 50, 0, 0" Visibility="Hidden"></ElementsControl:FormCompradores>
+        <ElementsControl:FormProveedor x:Name="formProveedor" Width="685" Height="470" HorizontalAlignment="Left"  Margin="0, 50, 0, 0" Visibility="Hidden"></ElementsControl:FormProveedor>
+        <ElementsControl:FormCentroGasto x:Name="formCentroGasto" Width="685" Height="470" HorizontalAlignment="Left"  Margin="0, 50, 0, 0" Visibility="Hidden"></ElementsControl:FormCentroGasto>
+        <ElementsControl:FormRemitente x:Name="formRemitente" Width="685" Height="470" HorizontalAlignment="Left"  Margin="0, 50, 0, 0" Visibility="Hidden"></ElementsControl:FormRemitente>
+        <ElementsControl:FormOrdenCompra x:Name="formOrdenCompra" Width="685" Height="470" HorizontalAlignment="Left"  Margin="0, 50, 0, 0" Visibility="Hidden"></ElementsControl:FormOrdenCompra>
+        
+        <ElementsControl:MenuDesplegable x:Name="menuDespegable" Width="180" Height="450" HorizontalAlignment="Left"  Margin="0, 30, 0, 0" Visibility="Hidden" MouseUp="creaForm" MouseLeave="esconderMenu"></ElementsControl:MenuDesplegable>
+        <Calendar x:Name="calendario" HorizontalAlignment="Left" Margin="695,70,0,0" VerticalAlignment="Top" Height="160"/>
+        
+
+        <ElementsControl:Pendientes x:Name="Pendientes" Height="220" Width="180" VerticalAlignment="Top"  Margin="675, 250, 0, 0"></ElementsControl:Pendientes>
+
+    </Grid>
+</Window>

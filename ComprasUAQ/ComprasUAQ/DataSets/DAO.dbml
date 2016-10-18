@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="compras" Class="DAODataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=148.220.38.243;Initial Catalog=compras;User ID=sa" SettingsObjectName="ComprasUAQ.Properties.Settings" SettingsPropertyName="comprasConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.centros_gasto" Member="centros_gastos">
+    <Type Name="centros_gasto">
+      <Column Name="id_centro_gasto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre_centro_gasto" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="centros_gasto_requisiciones" Member="requisiciones" ThisKey="id_centro_gasto" OtherKey="id_centro_gasto" Type="requisiciones" />
+    </Type>
+  </Table>
+  <Table Name="dbo.requisiciones" Member="requisiciones">
+    <Type Name="requisiciones">
+      <Column Name="id_requisicion" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_centro_gasto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_comprador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_proveedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clave_requisicion" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_elaboracion_requisicion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_entrega_requisicion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="estado_requisicion" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="carta_compromiso_requisicion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="fecha_promesa_entrega" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="observacion_requisicion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="requisiciones_ordenes_compra" Member="ordenes_compras" ThisKey="id_requisicion" OtherKey="id_requisicion" Type="ordenes_compra" />
+      <Association Name="requisiciones_recepciones_almacen" Member="recepciones_almacens" ThisKey="id_requisicion" OtherKey="id_requisicion" Type="recepciones_almacen" />
+      <Association Name="centros_gasto_requisiciones" Member="centros_gasto" ThisKey="id_centro_gasto" OtherKey="id_centro_gasto" Type="centros_gasto" IsForeignKey="true" />
+      <Association Name="compradores_requisiciones" Member="compradores" ThisKey="id_comprador" OtherKey="id_comprador" Type="compradores" IsForeignKey="true" />
+      <Association Name="proveedores_requisiciones" Member="proveedores" ThisKey="id_proveedor" OtherKey="id_proveedor" Type="proveedores" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.compradores" Member="compradores">
+    <Type Name="compradores">
+      <Column Name="id_comprador" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre_comprador" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="apellido_paterno_comprador" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="apellido_materno_comprador" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="compradores_requisiciones" Member="requisiciones" ThisKey="id_comprador" OtherKey="id_comprador" Type="requisiciones" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ordenes_compra" Member="ordenes_compras">
+    <Type Name="ordenes_compra">
+      <Column Name="id_orden_compra" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_requisicion" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="clave_orden_compra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipo_orden_compra" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="monto_orden_compra" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_orden_compra" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_limite_elab_orden_compra" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="fecha_enviada_firma_orden_compra" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="fecha_devuelta_firma_orden_compra" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="requisiciones_ordenes_compra" Member="requisiciones" ThisKey="id_requisicion" OtherKey="id_requisicion" Type="requisiciones" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.proveedores" Member="proveedores">
+    <Type Name="proveedores">
+      <Column Name="id_proveedor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre_proveedor" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="persona_moral_proveedor" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="proveedores_requisiciones" Member="requisiciones" ThisKey="id_proveedor" OtherKey="id_proveedor" Type="requisiciones" />
+    </Type>
+  </Table>
+  <Table Name="dbo.recepciones_almacen" Member="recepciones_almacens">
+    <Type Name="recepciones_almacen">
+      <Column Name="id_recepcion_almacen" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_requisicion" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="id_remitente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clave_recepcion_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_recepcion_almacen" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="monto_recepcion_almacen" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="fecha_entrega_de_almacen" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="num_resguardo_almacen" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="requisiciones_recepciones_almacen" Member="requisiciones" ThisKey="id_requisicion" OtherKey="id_requisicion" Type="requisiciones" IsForeignKey="true" />
+      <Association Name="remitentes_recepciones_almacen" Member="remitentes" ThisKey="id_remitente" OtherKey="id_remitente" Type="remitentes" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.remitentes" Member="remitentes">
+    <Type Name="remitentes">
+      <Column Name="id_remitente" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre_remitente" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="apellido_paterno_remitente" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="apellido_materno_remitente" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="remitentes_recepciones_almacen" Member="recepciones_almacens" ThisKey="id_remitente" OtherKey="id_remitente" Type="recepciones_almacen" />
+    </Type>
+  </Table>
+</Database>

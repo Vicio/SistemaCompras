@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="ComprasUAQ.Windows.Elements.MenuDesplegable"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ComprasUAQ.Windows.Elements"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="180">
+    <Grid  x:Name="Menu" Background="#CCCCCC">
+        
+        <StackPanel HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="180" Background="#CCCCCC" x:Name="panel">
+            <Grid x:Name="Requisiciones" Background="#CCCCCC" Width="180" Height="50" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Label Content="Requisiciones" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="20" Foreground="#FDFDFD" Background="#CCCCCC" HorizontalContentAlignment="Left" Width="180" Height="50" MouseEnter="DentroRequisiciones" MouseLeave="FueraRequisiciones" Cursor="Hand" Grid.ColumnSpan="2"/>
+            </Grid>
+            <Grid x:Name="Compradores" Background="#CCCCCC" Width="180" Height="50" Margin="0,00,0,0" VerticalAlignment="Top">
+                <Label Content="Compradores" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="20" Foreground="#FDFDFD" Background="#CCCCCC" HorizontalContentAlignment="Left" Width="180" Height="50" MouseEnter="DentroCompradores" MouseLeave="FueraCompradores" Cursor="Hand"/>
+            </Grid>
+            <Grid x:Name="Proveedores" Background="#CCCCCC" Width="180" Height="50" Margin="0,0,0,0" VerticalAlignment="Top">
+                <Label Content="Proveedores" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="20" Foreground="#FDFDFD" Background="#CCCCCC" HorizontalContentAlignment="Left" Width="180" Height="50" MouseEnter="DentroProveedores" MouseLeave="FUeraProveedores" Cursor="Hand"/>
+            </Grid>
+            <Grid x:Name="CentroGastos" Background="#CCCCCC" Width="180" Height="50" Margin="0,0,0,0" VerticalAlignment="Top">
+                <Label Content="Centro de gastos" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="20" Foreground="#FDFDFD" Background="#CCCCCC" HorizontalContentAlignment="Left" Width="180" Height="50" MouseEnter="DentroCentroGastos" MouseLeave="FueraCentroGastos" Cursor="Hand"/>
+            </Grid>
+            <Grid x:Name="Almacen" Background="#CCCCCC" Width="180" Height="50" Margin="0,0,0,0" VerticalAlignment="Top">
+                <Label Content="Almacen" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="20" Foreground="#FDFDFD" Background="#CCCCCC" HorizontalContentAlignment="Left" Width="180" Height="50" MouseEnter="DentroAlmacen" MouseLeave="FueraAlmacen" Cursor="Hand"/>
+            </Grid>
+            <Grid x:Name="Remitente" Background="#CCCCCC" Width="180" Height="50" Margin="0,0,0,0" VerticalAlignment="Top">
+                <Label Content="Remitente" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="20" Foreground="#FDFDFD" Background="#CCCCCC" HorizontalContentAlignment="Left" Width="180" Height="50" MouseEnter="DentroAlmacen" MouseLeave="FueraAlmacen" Cursor="Hand"/>
+            </Grid>
+            <Grid x:Name="OrdendeCompra" Background="#CCCCCC" Width="180" Height="50" Margin="0,0,0,0" VerticalAlignment="Top">
+                <Label Content="Orden de Compra" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="20" Foreground="#FDFDFD" Background="#CCCCCC" HorizontalContentAlignment="Left" Width="180" Height="50" MouseEnter="DentroAlmacen" MouseLeave="FueraAlmacen" Cursor="Hand"/>
+            </Grid>
+        </StackPanel> 
+    </Grid>
+</UserControl>
